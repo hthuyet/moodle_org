@@ -1,0 +1,31 @@
+<div id="block-category-{{uniqid}}" class="block-category" data-region="category">
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade in active" id="category_courses_view">
+            {{#coursesview}}
+                {{> block_category/courses-view }}
+            {{/coursesview}}
+        </div>
+    </div>
+</div>
+{{#js}}
+require(['jquery', 'block_category/tab_preferences'], function($, TabPreferences) {
+    var root = $('#block-category-view-choices-{{uniqid}}');
+    TabPreferences.registerEventListeners(root);
+});
+{{/js}}
+
+<style type="text/css">
+    .block-category .empty-placeholder-image-lg {
+        height: 125px;
+    }
+    .block-category .categoryimg {
+        height: 150px;
+    }
+</style>
+
+
+<div class="" style="clear: both;">
+    {{#coursesview}}
+        {{> block_category/main_123 }}
+    {{/coursesview}}
+</div>

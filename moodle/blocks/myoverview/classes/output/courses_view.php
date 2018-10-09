@@ -74,6 +74,8 @@ class courses_view implements renderable, templatable {
 
         // How many courses we have per status?
         $coursesbystatus = ['past' => 0, 'inprogress' => 0, 'future' => 0];
+        
+        //var_dump($this->courses);die;
         foreach ($this->courses as $course) {
             $courseid = $course->id;
             $context = \context_course::instance($courseid);
@@ -150,6 +152,8 @@ class courses_view implements renderable, templatable {
             }
         }
 
+        
+        //var_dump($coursesview);die;
         // Build courses view paging bar structure.
         foreach ($coursesbystatus as $status => $total) {
             $quantpages = ceil($total / $this::COURSES_PER_PAGE);
@@ -170,6 +174,7 @@ class courses_view implements renderable, templatable {
             }
         }
 
+        //var_dump($coursesview);die;
         return $coursesview;
     }
 

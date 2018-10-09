@@ -1,0 +1,390 @@
+{{ name }}
+<div>
+
+    <div class="ge" id="kph_area">
+        <div class="ge" id="kph_armain">
+            <!-- unit 1 -->
+            {{#courses}}
+                <div class="ge kphm_arlesson  ">
+                    <div class="ge kphml_artit">
+                        <div class="ge kphml_number">
+                            <div class="ge kphmln_text">1</div>
+                        </div>
+                        <div class="ge kphml_name">
+                            <div class="ge kphmln_ten">{{ id }}</div>
+                            <div class="ge kphmln_tvi">{{ name }}</div>
+                        </div>
+                        <div class="ge kphml_arstar">
+                            <div class="ge kphmls_icon"></div>
+                            <div class="ge kphmls_icon"></div>
+                            <div class="ge kphmls_icon"></div>
+                        </div>
+                        <div class="ge kphml_arscore">
+                            <span class="ge kphmls_your">0</span>/<span class="ge kphmls_total">330</span>
+                        </div>
+                    </div>
+                    <div class="ge kphml_arcontent" style="display: block;">
+                        <div class="ge kphmlc_part kphmlc_part_letter">
+                            <div class="ge kphmlcp_arname">
+                                <div class="ge kphmlcpn_icon"></div>
+                                <div class="ge kphmlcpn_ten">Letters</div>
+                                <div class="ge kphmlcpn_tvi">Chữ cái</div>
+                            </div>
+                            <div class="ge kphmlcp_arlink">
+                                <div class="ge kphmlcpl_area">
+                                    <div class="ge kphmlcpl_icon"></div>
+                                    <a class="ge kph_link" href="/tieng-anh-mam-non-bai1-letters/20238-letter-a.html"><div class="ge kphmlcpl_text">Letter A</div></a>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="ge kphmlc_part kphmlc_part_number">
+                            <div class="ge kphmlcp_arname">
+                                <div class="ge kphmlcpn_icon"></div>
+                                <div class="ge kphmlcpn_ten">Numbers</div>
+                                <div class="ge kphmlcpn_tvi">Chữ số</div>
+                            </div>
+                            <div class="ge kphmlcp_arlink">
+                                <div class="ge kphmlcpl_area">
+                                    <div class="ge kphmlcpl_icon"></div>
+                                    <a class="ge kph_link" href="/tieng-anh-mam-non-bai1-numbers/20239-number-1.html"><div class="ge kphmlcpl_text">Number 1</div></a>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="ge kphmlc_part kphmlc_part_sentence">
+                            <div class="ge kphmlcp_arname">
+                                <div class="ge kphmlcpn_icon"></div>
+                                <div class="ge kphmlcpn_ten">Sentences</div>
+                                <div class="ge kphmlcpn_tvi">Mẫu câu</div>
+                            </div>
+                            <div class="ge kphmlcp_arlink">
+                                <div class="ge kphmlcpl_area">
+                                    <div class="ge kphmlcpl_icon"></div>
+                                    <a class="ge kph_link" href="/tieng-anh-mam-non-bai1-sentences/20240-hello-2.html"><div class="ge kphmlcpl_text">Hello.</div></a>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            {{/courses}}
+        </div>          
+    </div>
+
+</div>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+<script type="text/javascript">
+
+$(document).ready(function () {
+    $('.kphmlc_part').on('click', function () {
+        var _self = $(this);
+        window.location.href = _self.find('.kph_link').eq(0).attr('href');
+    })
+    var eh_click = true;
+    $('.kphml_artit').unbind('click').bind('click', function () {
+        if (eh_click == true) {
+            eh_click = false;
+            var _self = $(this);
+            if ($('.kphml_arcontent').eq(_self.index('.kphml_artit')).css('display') == 'none') {
+                $('.kphml_arcontent').eq(_self.index('.kphml_artit')).show();
+                eh_click = true;
+//                try {
+//                    $('.kphml_arcontent').eq(_self.index('.kphml_artit')).show('blind', 500, function () {
+//                        eh_click = true;
+//                    });
+//                } catch (e) {
+//                    $('.kphml_arcontent').eq(_self.index('.kphml_artit')).show();
+//                    eh_click = true;
+//                }
+                $("html, body").animate({scrollTop: _self.offset().top}, 500);
+            } else {
+                $('.kphml_arcontent').eq(_self.index('.kphml_artit')).hide();
+                eh_click = true;
+//                try {
+//                    $('.kphml_arcontent').eq(_self.index('.kphml_artit')).hide('blind', 500, function () {
+//                        eh_click = true;
+//                    });
+//                } catch (e) {
+//                    $('.kphml_arcontent').eq(_self.index('.kphml_artit')).hide();
+//                    eh_click = true;
+//                }
+            }
+        }
+    })
+
+//        if ($('#kph_armain .kphm_arlesson_doing').length == 1) {
+//            if ($('.kphm_arlesson_doing').hasClass('kphm_arlesson_done')) {
+//                $('.kphm_arlesson_doing .kphml_artit').trigger('click');
+//            }
+//            $("html, body").animate({scrollTop: $('.kphm_arlesson_doing').offset().top}, 1000);
+//        } else {
+//            $("html, body").animate({scrollTop: $('#kphh_arbanner').offset().top}, 1000);
+//        }
+
+});
+</script>
+
+
+
+<style type="text/css">
+    .media-heading a:hover{
+        color: #ee7600 !important;
+    }
+
+    #kph_area{
+        width: 1000px; 
+        top: 15px; 
+        left: -13px; 
+        background-color: white; 
+        margin: auto; 
+        font-family: arial; 
+        font-size: 14px; 
+        line-height: 25px;
+    }
+
+    .ge {
+        position: relative;
+        top: 0px;
+        left: 0px;
+    }
+
+    #kph_arheader {
+        text-align: center;
+    }
+    #kphh_arbanner {
+        width: 1000px;
+        height: 350px;
+        margin: auto;
+        background-image: url(//goldenkids-data.tienganh123.com/file/learn/child/pc/preschool/img/kph_banner.png);
+    }
+
+    #kphhb_text {
+        width: 700px;
+        color: white;
+        top: 150px;
+        left: 153px;
+        line-height: 28px;
+        text-align: justify;
+    }
+
+    #kphh_note {
+        color: #666666;
+        margin: 10px 0px 40px 0px;
+    }
+
+    #kphh_arstar {
+    }
+
+    #kph_armain {
+        margin-top: 40px;
+    }
+
+    .kphm_arlesson {
+        width: 890px;
+        margin: 0px auto 20px;
+        font-family: baloo;
+    }
+
+    .kphml_artit {
+        cursor: pointer;
+        width: 100%;
+        height: 75px;
+        background-color: #e4596e;
+        color: white;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+
+    .kphml_number {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0px 20px;
+        font-size: 30px;
+        width: 45px;
+        height: 45px;
+        background-color: #f591a0;
+        border-radius: 50%;
+        text-align: center;
+    }
+
+    .kphmln_text {
+        top: 10px;
+    }
+    .kphml_name {
+        display: inline-block;
+        vertical-align: middle;
+        width: 66%;
+        height: 100%;
+    }
+
+    .kphmln_ten {
+        font-size: 28px;
+        margin-top: 15px;
+    }
+
+    .kphmln_tvi {
+        font-family: arial;
+        font-size: 12px;
+    }
+
+    .kphml_arstar {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0px 10px;
+    }
+
+    .kphml_arscore {
+        font-size: 20px;
+        display: inline-block;
+        vertical-align: middle;
+        color: #a0a0a0;
+        text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+    }
+
+    .kphml_arcontent {
+        border: solid 1px #d0d0d0;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        padding: 25px 0px 20px 0px;
+    }
+
+    .kphmlc_part_letter {
+        border: solid 1px #139942;
+    }
+
+    .kphmlc_part {
+        cursor: pointer;
+        display: inline-block;
+        background-color: white;
+        width: 395px;
+        height: 158px;
+        border-radius: 15px;
+        margin: 0px 0px 18px 30px;
+    }
+
+    .kphmlc_part_number {
+        border: solid 1px #f8713b;
+    }
+
+    .kphmlc_part_sentence {
+        border: solid 1px #10bdb5;
+    }
+
+
+
+    .kphmlc_part_letter .kphmlcp_arname {
+        background-color: #a5ecbe;
+        color: #139942;
+    }
+
+    .kphmlcp_arname {
+        display: inline-block;
+        vertical-align: middle;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        text-align: center;
+        width: 168px;
+        height: 158px;
+    }
+
+    .kphmlc_part_letter .kphmlcpn_icon {
+        width: 101px;
+        height: 40px;
+        background-image: url(//goldenkids-data.tienganh123.com/file/learn/child/pc/preschool/img/kph_iletter.png);
+    }
+
+    .kphmlc_part_number .kphmlcpn_icon {
+        width: 120px;
+        height: 47px;
+        background-image: url(//goldenkids-data.tienganh123.com/file/learn/child/pc/preschool/img/kph_inumber.png);
+    }
+
+    .kphmlc_part_sentence .kphmlcpn_icon {
+        width: 81px;
+        height: 54px;
+        background-image: url(//goldenkids-data.tienganh123.com/file/learn/child/pc/preschool/img/kph_isentence.png);
+    }
+
+
+    .kphmlcpn_icon {
+        margin: 30px auto 10px;
+    }
+
+    .kphmlcpn_ten {
+        font-size: 28px;
+    }
+
+
+    .kphmlcpn_tvi {
+        font-family: arial;
+        color: #585858;
+    }
+
+    .kphmlcp_arlink {
+        width: 222px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .kphmlcpl_area {
+        margin: 18px 0px 18px 12px;
+    }
+
+    .kphmlc_part_number .kphmlcp_arname {
+        background-color: #fbddd2;
+        color: #f8713b;
+    }
+
+    .kphmlc_part_sentence .kphmlcp_arname {
+        background-color: #b1faf7;
+        color: #10bdb5;
+    }
+
+
+
+    .kphmlc_part_number .kphmlcpl_icon {
+        background-position: -32px 0px;
+    }
+
+    .kphmlcpl_icon {
+        display: inline-block;
+        vertical-align: middle;
+        width: 32px;
+        height: 24px;
+        background-image: url(//goldenkids-data.tienganh123.com/file/learn/child/pc/preschool/img/kph_iarrow.png);
+    }
+
+    .kph_link {
+        text-decoration: none;
+    }
+
+    .kphmlc_part_letter .kphmlcpl_text {
+        color: #139942 !important;
+    }
+
+    .kphmlc_part_sentence .kphmlcpl_text {
+        color: #10bdb5 !important;
+    }
+
+    .kphmlc_part_number .kphmlcpl_text {
+        color: #f8713b !important;
+    }
+
+    .kphmlcpl_text {
+        font-weight: bold;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 18px;
+        margin-left: 5px;
+        width: 80%;
+    }
+</style>

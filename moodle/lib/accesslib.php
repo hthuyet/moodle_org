@@ -5882,7 +5882,6 @@ class context_system extends context {
             return context::$systemcontext;
         }
 
-
         try {
             // We ignore the strictness completely because system context must exist except during install.
             $record = $DB->get_record('context', array('contextlevel'=>CONTEXT_SYSTEM), '*', MUST_EXIST);

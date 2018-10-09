@@ -59,6 +59,8 @@ class block_myoverview extends block_base {
             }
         }
 
+        
+//        var_dump($tab);die; //courses
         $renderable = new \block_myoverview\output\main($tab);
         $renderer = $this->page->get_renderer('block_myoverview');
 

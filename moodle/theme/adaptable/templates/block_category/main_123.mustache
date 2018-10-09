@@ -1,0 +1,116 @@
+<div class="" style="clear: both;">
+    <div class="b1_content">
+        {{#inprogress}}
+            {{#pages}}
+                {{#courses}}
+                    <div class="b1_lesson">
+                        <a class="b1_img_link" href="{{viewurl}}" title="Unit {{id}}: {{ fullnamedisplay }}">
+                            <div class="categoryimg m-b-1 {{classes}}" style='background-image: url("{{{courseimage}}}");'></div>
+                        </a>
+                        <a href="{{viewurl}}" title="Unit {{id}}: {{ fullnamedisplay }}" class="b1_unit ">Unit {{id}}</a>
+                        <p class="b1_unit_info">{{ fullnamedisplay }}</p>
+                        <div class="b1_unit_status ">Complete <b>{{progress}}%</b></div>
+                    </div>
+                {{/courses}}
+            {{/pages}}
+        {{/inprogress}}
+<!--        <div class="b1_lesson">
+            <a class="b1_img_link" href="https://www.tienganh123.com/luyen-thi-b1-bai1-mieu-ta-nguoi" title="Unit 1">
+                <img src="//data.tienganh123.com/images/avatar/b1_unit1.jpg">
+            </a>
+            <a href="https://www.tienganh123.com/luyen-thi-b1-bai1-mieu-ta-nguoi" title="Unit 1: People description" class="b1_unit ">Unit 1</a>
+            <p class="b1_unit_info">People description 324</p>
+            <div class="b1_unit_status ">Complete <b>0%</b></div>
+        </div>
+        <div class="b1_lesson">
+            <a class="b1_img_link" href="https://www.tienganh123.com/luyen-thi-b1-bai1-mieu-ta-nguoi" title="Unit 1">
+                <img src="//data.tienganh123.com/images/avatar/b1_unit1.jpg">
+            </a>
+            <a href="https://www.tienganh123.com/luyen-thi-b1-bai1-mieu-ta-nguoi" title="Unit 1: People description" class="b1_unit ">Unit 1</a>
+            <p class="b1_unit_info">People description</p>
+            <div class="b1_unit_status ">Complete <b>4%</b></div>
+        </div>
+        <div class="b1_lesson">
+            <a class="b1_img_link" href="https://www.tienganh123.com/luyen-thi-b1-bai1-mieu-ta-nguoi" title="Unit 1">
+                <img src="//data.tienganh123.com/images/avatar/b1_unit1.jpg">
+            </a>
+            <a href="https://www.tienganh123.com/luyen-thi-b1-bai1-mieu-ta-nguoi" title="Unit 1: People description" class="b1_unit ">Unit 1</a>
+            <p class="b1_unit_info">People description</p>
+            <div class="b1_unit_status ">Complete <b>0%</b></div>
+        </div>
+        <div class="b1_lesson">
+            <a class="b1_img_link" href="https://www.tienganh123.com/luyen-thi-b1-bai1-mieu-ta-nguoi" title="Unit 1">
+                <img src="//data.tienganh123.com/images/avatar/b1_unit1.jpg">
+            </a>
+            <a href="https://www.tienganh123.com/luyen-thi-b1-bai1-mieu-ta-nguoi" title="Unit 1: People description" class="b1_unit ">Unit 1</a>
+            <p class="b1_unit_info">People description</p>
+            <div class="b1_unit_status ">Complete <b>0%</b></div>
+        </div>-->
+    </div>
+</div>
+
+<style type="text/css">
+    .b1_img_link .categoryimg {
+        height: 150px;
+    }
+
+    .b1_content {
+        padding: 0 10px;
+        text-align: center;
+
+        float: left;
+        _width: 760px;
+        padding: 9px 8px 8px 13px;
+        line-height: 180%;
+        width: 100%;
+    }
+
+    .b1_content .b1_lesson {
+        border: 1px solid #dbdbdb;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px 1px #dbdbdb;
+        display: inline-block;
+        margin: 0 8px 20px;
+        text-align: center;
+        width: 20%;
+    }
+    .b1_content .b1_img_link {
+        display: block;
+    }
+
+    .b1_content .b1_unit {
+        border: 1px solid #f27b00;
+        border-radius: 60px;
+        color: #f27b00;
+        display: inline-block;
+        font-family: arial;
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 10px;
+        padding: 2px 0;
+        width: 50%;
+    }
+
+    .b1_content .b1_unit_info {
+        color: #575757;
+        display: block;
+        font-family: roboto;
+        font-size: 16px;
+        font-weight: bold;
+        height: 50px;
+        margin: 10px 0 0;
+        overflow: hidden;
+        padding: 0 13px;
+    }
+
+    .b1_content .b1_unit_status {
+        background-image: url(//data.tienganh123.com/images/v2/module/b1_status_1.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        color: #5c5c5c;
+        font-family: "Roboto Condensed",sans-serif;
+        font-size: 16px;
+        height: 31px;
+        line-height: 31px;
+    }
+</style>

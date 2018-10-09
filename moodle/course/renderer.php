@@ -1496,6 +1496,7 @@ class core_course_renderer extends plugin_renderer_base {
             $chelper->set_show_courses(self::COURSECAT_SHOW_COURSES_AUTO);
         }
 
+        
         return $content;
     }
 
@@ -1615,6 +1616,7 @@ class core_course_renderer extends plugin_renderer_base {
 
         $content .= html_writer::end_tag('div'); // .course_category_tree
 
+        
         return $content;
     }
 
@@ -1708,6 +1710,7 @@ class core_course_renderer extends plugin_renderer_base {
             $catdisplayoptions['viewmoreurl'] = new moodle_url($baseurl, array('browse' => 'categories', 'page' => 1));
         }
         $chelper->set_courses_display_options($coursedisplayoptions)->set_categories_display_options($catdisplayoptions);
+        
         // Add course search form.
         $output .= $this->course_search_form();
 

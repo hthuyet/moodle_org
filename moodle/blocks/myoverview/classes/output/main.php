@@ -65,6 +65,8 @@ class main implements renderable, templatable {
 
         $courses = enrol_get_my_courses('*');
         $coursesprogress = [];
+        
+        //var_dump($courses);die;
 
         foreach ($courses as $course) {
 

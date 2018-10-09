@@ -51,8 +51,10 @@ if ($categoryid) {
     $PAGE->set_url('/course/index.php');
 }
 
-$PAGE->set_pagelayout('coursecategory');
+//$PAGE->set_pagelayout('coursecategory');
+$PAGE->set_pagelayout('category');
 $courserenderer = $PAGE->get_renderer('core', 'course');
+
 
 if ($CFG->forcelogin) {
     require_login();

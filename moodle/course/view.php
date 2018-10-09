@@ -216,6 +216,7 @@
     }
 
     $completion = new completion_info($course);
+    
     if ($completion->is_enabled()) {
         $PAGE->requires->string_for_js('completion-alt-manual-y', 'completion');
         $PAGE->requires->string_for_js('completion-alt-manual-n', 'completion');
